@@ -4,20 +4,26 @@ import '../css/Header.css';
 function Header() {
     return (
         <div className='navbar'>
-            <div>
-                <MdOutlineDarkMode />
+            <div className='icon'>
+                <MdOutlineDarkMode id='dark' />
             </div>
 
-            <div>
-                <h1>
-
-                </h1>
-                <h1>
-
-                </h1>
-                <h1>
-
-                </h1>
+            <div className='text'>
+                <div className='under'>
+                    <h1>
+                        About
+                    </h1>
+                </div>
+                <div className='under'>
+                    <h1>
+                        Projects
+                    </h1>
+                </div>
+                <div className='under'>
+                    <h1>
+                        Contact
+                    </h1>
+                </div>
             </div>
 
         </div>

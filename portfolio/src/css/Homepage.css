@@ -27,7 +27,7 @@ h3 {
     font-weight: 300;
 }
 
-.bg{
+.bg {
     height: 300vh;
     width: 100%;
     overflow: hidden;
@@ -39,12 +39,12 @@ h3 {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 50vh;
+    height: 40vh;
     flex-direction: row;
 }
 
 
-.about-image-container{
+.about-image-container {
     object-fit: cover;
     height: 150px;
     width: 150px;
@@ -52,7 +52,7 @@ h3 {
     background-color: blue;
 }
 
-.about-image-container img{
+.about-image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -65,59 +65,78 @@ h3 {
     width: 50%;
     align-items: center;
     justify-content: space-between;
-    
+
 }
 
-.about-text p{
+.about-text p {
     max-width: 100%;
 }
 
-.text-container{
+.text-container {
     width: 75%;
     height: auto;
 }
 
-.projects{
+.projects {
     width: 100%;
     height: 80vh;
-    border: 1px solid black;
     display: flex;
-    
+
     align-items: center;
     flex-direction: column;
 }
 
-.proj-text{
+.proj-text {
     width: 50%;
     height: 15%;
-    border: 1px solid black;
     display: flex;
     justify-content: flex-start;
 }
 
-.project-container{
+.project-container {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
     width: 100%;
     height: 85%;
-    border: 1px solid black;
 }
 
-.proj-box{
+.proj-box {
     box-sizing: border-box;
     cursor: pointer;
     border-radius: 10px;
     width: 40%;
     height: 35%;
+    padding: 0.4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 }
 
-.proj-box:hover{
-    border: 2px solid black;
+.proj-box h2 {
+    font-size: 120%;
+    margin-bottom: 0.5rem;
 }
 
-.button-proj{
+.proj-box h3 {
+    font-size: 110%;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.proj-box p {
+    color: var(--gray);
+    font-size: 90%;
+    margin-top: auto;
+}
+
+.proj-box:hover {
+    box-shadow: 0 0 0 2px black;
+}
+
+.button-proj {
     cursor: pointer;
     border: 2px solid black;
     color: var(--black);
@@ -125,4 +144,80 @@ h3 {
     width: 5%;
     height: 7%;
     border-radius: 10px;
+}
+
+.experience {
+    border: 1px solid black;
+    height: 150vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ex-text {
+    width: 50%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.center-ex-text{
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.center-inner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.inner{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.left-side{
+    height: 100%;
+    width: 20%;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.right-side{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 80%;
+    background-color: bisque;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.circle{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    border-radius: 50%;
+
+}
+.line{
+    width: 4px;
+    height: 140px;
+    background-color: black;
+}
+
+.work-ex-text{
+    width: 100%;
+    border: 1px solid black;
+    height: 14%;
 }
