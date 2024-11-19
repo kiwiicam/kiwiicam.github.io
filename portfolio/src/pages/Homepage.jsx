@@ -157,10 +157,33 @@ function Homepage() {
                     <h1>
                         Education
                     </h1>
-                    <h3>My past & current education</h3>
+                    <h3>Academic background</h3>
                 </div>
                 <div className='edu-text'>
-
+                    <div className='edu-para'>
+                        <h3>
+                            Primary/Intermediate Years
+                        </h3>
+                        <p>
+                            My schooling during these years resided at Blockhouse Bay Primary school and Blockhouse Bay intermediate school. Throughout these years I was heavily invested in sports quite heavily, whilst still maintaining my grades, this is also where I got my first glance at computers - during my ICT classes.
+                        </p>
+                    </div>
+                    <div className='edu-para'>
+                        <h3>
+                            College/High school Years
+                        </h3>
+                        <p>
+                            My schooling throughout this period was centered at Lynfield College, where my sporting passion took a backseat and my academics took first place, I took more advanced mathematics classes and during my final 2 years at college my school offered 2 computer related classes which I found kicked off my passion for computer science and it’s related fields, one of these classes was programming, specifically in Python, where I struggled but enjoyed.
+                        </p>
+                    </div>
+                    <div className='edu-para'>
+                        <h3>
+                            University Years (Current)
+                        </h3>
+                        <p>
+                            I am currently studying at the Auckland University of Technology, pursuing a degree in computer science, majoring in software development and minoring in artificial intelligence, where I have taken classes such as Data structures and algorithms, Software development practice, Many programming classes, Operating Systems and multiple Math classes, such as Algebra and discrete mathematics and also Math for computing, My time so far at AUT has been unmatched the amount I have learned, from group projects to my coding skills, I hope to learn much more as my time here continues.
+                        </p>
+                    </div>
                 </div>
 
             </div>
@@ -172,7 +195,19 @@ function Homepage() {
                     </h3>
                 </div>
                 <div className='contact-container'>
-                
+                    <h3>
+                        Via contact form
+                    </h3>
+                    <input id='email' className='contact-form' placeholder='Email' type='email'>
+                    </input>
+
+                    <input id='name' className='contact-form' placeholder='Name' >
+                    </input>
+
+                    <input id='message' className='contact-form' placeholder='Message'>
+                    </input>
+
+                    <button className='contact-button'> Send message &gt;</button>
                 </div>
             </div>
         </div>
