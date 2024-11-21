@@ -1,6 +1,7 @@
 import React from 'react';
 import { MdOutlineDarkMode } from "react-icons/md";
 import '../css/Header.css';
+import '../css/Global.css';
 function Header() {
     return (
         <div className='navbar'>
