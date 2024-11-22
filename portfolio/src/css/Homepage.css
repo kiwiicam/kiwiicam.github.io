@@ -31,6 +31,7 @@ h3 {
     height: auto;
     width: 100%;
     overflow: hidden;
+    background-color: var(--white);
 }
 
 
@@ -428,6 +429,10 @@ input {
     }
     .about-text {
         width: 80%;
+    }
+
+    .text-container p{
+        font-size: 60%;
     }
 
     .about-image-container {

@@ -20,15 +20,18 @@
     cursor: pointer;
     font-size: 30px;
     margin-right: 50px;
+    color: var(--black);
 }
 
 #menu{
     font-size: 28px;
+    color: var(--white);
 
 }
 
 #cross{
     font-size: 28px;
+    color: var(--white);
 }
 
 .under1::after {
