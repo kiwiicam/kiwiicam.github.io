@@ -10,7 +10,7 @@ const Star = () => {
     const positionX = Math.random() * 96;
     const positionY = Math.random() * 300;
     const animationDuration = Math.random() * 5 + 5;
-    const animationDelay = Math.random() * 2 + 's';
+    const animationDelay = Math.random() * 1 + 's';
 
     const rand = Math.random();
     var dir = 'bounce';
