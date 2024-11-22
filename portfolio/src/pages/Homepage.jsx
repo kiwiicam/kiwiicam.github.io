@@ -4,7 +4,7 @@ import "../css/Homepage.css";
 import "../css/Global.css";
 
 function Homepage() {
-
+    
     // const numStars = 75;
     // const stars = new Array(numStars).fill(0);
     // {stars.map((_, index) => (
@@ -39,14 +39,14 @@ function Homepage() {
                         <h2>Pricehound &gt;</h2>
                         <h3>Pricehound was a group project for one of my university classes, this project involved web scraping and comparing prices from various sources. The technologies used include React, Node.js/Express.js, Puppeteer and Firebase</h3>
 
-                        <p>July-October 2023</p>
+                        <p>July-October 2024</p>
 
                     </div>
                     <div className='proj-box'>
                         <h2>Blackjack GUI &gt;</h2>
                         <h3>This project involved creating a blackjack game entirely written in Java, and using libraries such as swing and awt to create a graphical user interface and also includes an Apache Derby embedded database.</h3>
 
-                        <p>April-June 2023</p>
+                        <p>April-June 2024</p>
                     </div>
                     <button className='button-proj'>View all &gt;</button>
 

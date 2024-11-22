@@ -1,8 +1,9 @@
 .navbar {
     width: 100%;
-    height: 8vh;
+    height: auto;
     position: fixed;
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -17,29 +18,119 @@
 
 #dark {
     cursor: pointer;
-    font-size: 30px
+    font-size: 30px;
+    margin-right: 50px;
 }
 
-.under::after {
+#menu{
+    font-size: 28px;
+
+}
+
+#cross{
+    font-size: 28px;
+}
+
+.under1::after {
     content: '';
     background-color: blue;
     width: 0%;
-    height: 3%;
+    height: 2px;
     top: 75%;
     position: absolute;
-    transition: 0.3s ease-in-out;
+    transition: 0.4s ease-in-out;
 }
 
-.under{
+.under2::after {
+    content: '';
+    background-color: blue;
+    width: 0%;
+    height: 2px;
+    top: 75%;
+    position: absolute;
+    transition: 0.4s ease-in-out;
+}
+
+.under3::after {
+    content: '';
+    background-color: blue;
+    width: 0%;
+    height: 2px;
+    top: 75%;
+    position: absolute;
+    transition: 0.4s ease-in-out;
+}
+
+.under1, .under2, .under3 {
     cursor: pointer;
 }
 
-.under h1{
+.under1 h1 {
     font-family: var(--font);
     font-size: 1.3rem;
 }
 
-.under:hover::after {
-    width: 4%;
+.under2 h1 {
+    font-family: var(--font);
+    font-size: 1.3rem;
+}
+
+.under3 h1 {
+    font-family: var(--font);
+    font-size: 1.3rem;
+}
+
+
+.under1:hover::after {
+    width: 65px;
     background-color: black;
 }
+
+.under2:hover::after {
+    width: 85px;
+    background-color: black;
+}
+
+.under3:hover::after{
+    width: 85px;
+    background-color: black;
+}
+
+.mobile-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    top: 60px;
+    left: 230px;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 33%;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+.box:last-child{
+    border-bottom: none;
+}
+@media (max-width: 800px){
+    .navbar{
+        justify-content: center;
+
+        height: 7vh;
+    }  
+
+}
+
