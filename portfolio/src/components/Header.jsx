@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { MdOutlineDarkMode } from "react-icons/md";
 import { MdOutlineLightMode } from "react-icons/md";
+import { Link, animateScroll as scroll } from 'react-scroll';
 import { RiMenu5Line } from "react-icons/ri";
 import { RxCross1 } from "react-icons/rx";
 import '../css/Header.css';
 import '../css/Global.css';
 function Header() {
+    const screenWidth = window.screen.width;
     const [show, setShow] = useState(false);
     const [theme,setTheme] = useState(false);// false indicates light mode, true indicates dark mode
+    const [page, setPage] = useState(null);
     function handleClick() {
         setShow(!show);
     }
@@ -28,6 +31,10 @@ function Header() {
 
     useEffect(() => {
         const theme = localStorage.getItem('theme');
+        if(theme === null)
+        {
+            return;
+        }
         if (theme.localeCompare('dark') === 0) {
             document.documentElement.style.setProperty('--black', '#ffffff');
             document.documentElement.style.setProperty('--white', '#000000');
@@ -38,13 +45,17 @@ function Header() {
         }
     }, [theme]);
 
-    const screenWidth = window.screen.width;
+    function changePage(){
+
+    }
+
+    
     return (
         <div className='navbar'>
             <div className='icon'>
                 {theme ?
-                    <MdOutlineDarkMode id='dark' onClick={changeThemeLight} /> :
-                    <MdOutlineLightMode id='dark' onClick={changeTheme}/>
+                    <MdOutlineLightMode id='dark' onClick={changeThemeLight} /> :
+                    <MdOutlineDarkMode id='dark' onClick={changeTheme}/>
                 }
             </div>
             {screenWidth < 800 ?
@@ -60,7 +71,7 @@ function Header() {
                                 Projects
                             </h1>
                         </div>
-                        <div className='box'>
+                        <div className='box' onClick={() => scroll.scrollTo(2490)}>
                             <h1>
                                 Contact
                             </h1>
@@ -79,7 +90,7 @@ function Header() {
                         </h1>
                     </div>
                     <div className='under3'>
-                        <h1>
+                        <h1 onClick={() => scroll.scrollTo(3090)}>
                             Contact
                         </h1>
                     </div>

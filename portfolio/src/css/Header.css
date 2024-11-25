@@ -4,6 +4,7 @@
     position: fixed;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
+    -moz-backdrop-filter: blur(15px);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -25,13 +26,13 @@
 
 #menu{
     font-size: 28px;
-    color: var(--white);
+    color: var(--black);
 
 }
 
 #cross{
     font-size: 28px;
-    color: var(--white);
+    color: var(--black);
 }
 
 .under1::after {
@@ -86,17 +87,17 @@
 
 .under1:hover::after {
     width: 65px;
-    background-color: black;
+    background-color: var(--black);
 }
 
 .under2:hover::after {
     width: 85px;
-    background-color: black;
+    background-color: var(--black);
 }
 
 .under3:hover::after{
     width: 85px;
-    background-color: black;
+    background-color: var(--black);
 }
 
 .mobile-menu{
@@ -109,10 +110,11 @@
     height: 100px;
     background-color: transparent;
     top: 60px;
-    left: 230px;
+    left: 270px;
+    -moz-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    border: 2px solid black;
+    border: 2px solid var(--black);
     border-radius: 10px;
 }
 
@@ -122,18 +124,24 @@
     justify-content: center;
     height: 33%;
     width: 100%;
-    border-bottom: 1px solid black;
 }
 
-.box:last-child{
-    border-bottom: none;
-}
 @media (max-width: 800px){
     .navbar{
-        justify-content: center;
+        justify-content: space-between;
+
 
         height: 7vh;
-    }  
+    } 
+    #menu{
+        margin-right: 10%;
+    } 
+    #dark{
+        margin-left: 25%;
+    }
+    #cross{
+        margin-right: 10%;
+    }
 
 }
 
