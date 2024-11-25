@@ -81,7 +81,7 @@ function Header() {
                 <div className='text'>
                     <div className='under1'>
                         <h1>
-                            About
+                            AboutTEST
                         </h1>
                     </div>
                     <div className='under2'>
