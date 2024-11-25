@@ -1,21 +1,62 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { MdOutlineDarkMode } from "react-icons/md";
+import { MdOutlineLightMode } from "react-icons/md";
+import { Link, animateScroll as scroll } from 'react-scroll';
 import { RiMenu5Line } from "react-icons/ri";
 import { RxCross1 } from "react-icons/rx";
 import '../css/Header.css';
 import '../css/Global.css';
 function Header() {
+    const screenWidth = window.screen.width;
     const [show, setShow] = useState(false);
-
+    const [theme,setTheme] = useState(false);// false indicates light mode, true indicates dark mode
+    const [page, setPage] = useState(null);
     function handleClick() {
         setShow(!show);
     }
 
-    const screenWidth = window.screen.width;
+    function changeThemeState(){
+        setTheme(!theme);
+    }
+
+    function changeTheme() {
+        localStorage.setItem("theme", "dark")
+        changeThemeState();
+    }
+
+    function changeThemeLight(){
+        localStorage.setItem("theme", "light");
+        changeThemeState();
+    }
+
+    useEffect(() => {
+        const theme = localStorage.getItem('theme');
+        if(theme === null)
+        {
+            return;
+        }
+        if (theme.localeCompare('dark') === 0) {
+            document.documentElement.style.setProperty('--black', '#ffffff');
+            document.documentElement.style.setProperty('--white', '#000000');
+        }
+        else if(theme.localeCompare('light') === 0){
+            document.documentElement.style.setProperty('--black', '#000000');
+            document.documentElement.style.setProperty('--white', '#ffffff');
+        }
+    }, [theme]);
+
+    function changePage(){
+
+    }
+
+    
     return (
         <div className='navbar'>
             <div className='icon'>
-                <MdOutlineDarkMode id='dark' />
+                {theme ?
+                    <MdOutlineLightMode id='dark' onClick={changeThemeLight} /> :
+                    <MdOutlineDarkMode id='dark' onClick={changeTheme}/>
+                }
             </div>
             {screenWidth < 800 ?
                 (show ? <><RxCross1 id='cross' onClick={handleClick} />
@@ -30,7 +71,7 @@ function Header() {
                                 Projects
                             </h1>
                         </div>
-                        <div className='box'>
+                        <div className='box' onClick={() => scroll.scrollTo(2490)}>
                             <h1>
                                 Contact
                             </h1>
@@ -40,7 +81,7 @@ function Header() {
                 <div className='text'>
                     <div className='under1'>
                         <h1>
-                            About
+                            AboutTEST
                         </h1>
                     </div>
                     <div className='under2'>
@@ -49,7 +90,7 @@ function Header() {
                         </h1>
                     </div>
                     <div className='under3'>
-                        <h1>
+                        <h1 onClick={() => scroll.scrollTo(3090)}>
                             Contact
                         </h1>
                     </div>

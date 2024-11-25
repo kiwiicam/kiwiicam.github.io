@@ -5,14 +5,17 @@ import '../css/Global.css';
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { TiArrowSortedUp } from "react-icons/ti";
+import { Link, animateScroll as scroll } from 'react-scroll';
 
-function Footer() {
+function Footer({ BackToTop }) {
+
+
   return (
     <div className='footer'>
       <div className='icons'>
         <div className='middle-footer'>
-          <FaGithub className='move' />
-          <div className='up'>
+          <FaGithub id='git' className='move' />
+          <div className='up' onClick={() => scroll.scrollTo(0)}>
             <TiArrowSortedUp />
           </div>
           <FaLinkedin id='link'className='move' />

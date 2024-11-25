@@ -31,6 +31,7 @@ h3 {
     height: auto;
     width: 100%;
     overflow: hidden;
+    background-color: var(--white);
 }
 
 
@@ -122,6 +123,7 @@ h3 {
 .proj-box h2 {
     font-size: 120%;
     margin-bottom: 0.5rem;
+    color: var(--black);
 }
 
 .proj-box h3 {
@@ -137,14 +139,15 @@ h3 {
 }
 
 .proj-box:hover {
-    box-shadow: 0 0 0 2px black;
+    box-shadow: 0 0 0 2px var(--black);
     transform: scale(1.05);
 }
 
 .button-proj {
+    background-color: transparent;
     margin-top: 3%;
     cursor: pointer;
-    border: 2px solid black;
+    border: 2px solid var(--black);
     color: var(--black);
     font-family: var(--font);
     width: 90px;
@@ -217,7 +220,7 @@ h3 {
     background-blend-mode: multiply;
     height: 90px;
     width: 90px;
-    background-color: black;
+    background-color: var(--black);
     border-radius: 50%;
     object-fit: cover;
 
@@ -386,7 +389,8 @@ input {
 
 .contact-button {
     cursor: pointer;
-    border: 2px solid black;
+    background-color: transparent;
+    border: 2px solid var(--black);
     color: var(--black);
     font-family: var(--font);
     width: 140px;
@@ -428,6 +432,10 @@ input {
     }
     .about-text {
         width: 80%;
+    }
+
+    .text-container p{
+        font-size: 60%;
     }
 
     .about-image-container {

@@ -61,6 +61,9 @@
     color: #0a66c2;
 }
 
+#git{
+    color: var(--black);
+}
 
 
 @media (max-width:1400px) {
