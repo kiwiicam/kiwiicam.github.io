@@ -1,18 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Star from '../components/Star';
 import "../css/Homepage.css";
 import "../css/Global.css";
+import emailjs from '@emailjs/browser'
 
 function Homepage() {
-    
-    // const numStars = 75;
-    // const stars = new Array(numStars).fill(0);
-    // {stars.map((_, index) => (
-    //     <Star key={index} />
-    // ))}
+    const [message, setMessage] = useState(null);
+    const [name, setName] = useState(null);
+    const [email, setEmail] = useState(null);
+
+    const numStars = 275;
+    const stars = new Array(numStars).fill(0);
+
+    const sendEmail = (e) => {
+
+        console.log(message);
+        console.log(name);
+        console.log(email);
+        e.preventDefault();
+        try {
+            //emailjs.sendForm();
+        }
+        catch (e) {
+
+        }
+
+    }
 
     return (
         <div className='bg'>
+            {stars.map((_, index) => (
+                <Star key={index} />
+            ))}
             <div className='about'>
                 <div className='about-text'>
                     <div className='text-container'>
@@ -22,7 +41,7 @@ function Homepage() {
                     </div>
 
                     <div className='about-image-container'>
-                        <img src='https://kiwiicam.github.io/campbell/pfp.jpg'></img>
+                        <img src='https://kiwiicam.github.io/pfp.jpg'></img>
                     </div>
                 </div>
             </div>
@@ -64,7 +83,7 @@ function Homepage() {
                         <div className='content'>
                             <div className='c-div'>
                                 <div className='circle'>
-                                    <img src='https://kiwiicam.github.io/campbell/pushpay.png'></img>
+                                    <img src='https://kiwiicam.github.io/pushpay.png'></img>
                                 </div>
                                 <div className='work-ex-text'>
                                     <h1>
@@ -93,12 +112,12 @@ function Homepage() {
 
                                 </div>
                                 <div className='circle'>
-                                    <img src='https://kiwiicam.github.io/campbell/briscoe.png'></img>
+                                    <img src='https://kiwiicam.github.io/briscoe.png'></img>
                                 </div>
                             </div>
                             <div className='c-div'>
                                 <div className='circle'>
-                                    <img src='https://kiwiicam.github.io/campbell/ropes.png'></img>
+                                    <img src='https://kiwiicam.github.io/ropes.png'></img>
                                 </div>
                                 <div className='work-ex-text'>
                                     <h1>
@@ -125,12 +144,12 @@ function Homepage() {
                                     </p>
                                 </div>
                                 <div className='circle'>
-                                    <img src='https://kiwiicam.github.io/campbell/side.png'></img>
+                                    <img src='https://kiwiicam.github.io/side.png'></img>
                                 </div>
                             </div>
                             <div className='c-div'>
                                 <div className='circle'>
-                                    <img src='https://kiwiicam.github.io/campbell/spotless.png'></img>
+                                    <img src='https://kiwiicam.github.io/spotless.png'></img>
                                 </div>
                                 <div className='work-ex-text'>
                                     <h1>
@@ -196,15 +215,16 @@ function Homepage() {
                     <h3 className='contact-f'>
                         Through my contact form
                     </h3>
-                    <input id='email' className='contact-form' placeholder='Email' type='email'>
+
+                    <input onChange={(e) => setEmail(e.target.value)} id='email' className='contact-form' placeholder='Email' type='email'>
                     </input>
 
-                    <input id='name' className='contact-form' placeholder='Name' >
+                    <input onChange={(e) => setName(e.target.value)} id='name' className='contact-form' placeholder='Name' >
                     </input>
 
-                    <textarea id="message" class="contact-form" placeholder="Your message here..."></textarea>
+                    <textarea onChange={(e) => setMessage(e.target.value)} id="message" class="contact-form" placeholder="Your message here..."></textarea>
 
-                    <button className='contact-button'> Send message &gt;</button>
+                    <button onClick={sendEmail} className='contact-button'> Send message &gt;</button>
                     <h3 className='email-link'>Or through my <a href='mailto:mastercamnz@gmail.com'>email address</a></h3>
                 </div>
             </div>

@@ -1,0 +1,51 @@
+.project-page{
+    margin-top: 0%;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+}
+
+.center-txt{
+    margin-top: 5%;
+    width: 50%;
+}
+
+.proj-box {
+    margin-top: 3%;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 40%;
+    height: 15%;
+    padding: 0.4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s ease-in-out;
+
+}
+
+.proj-box h2 {
+    font-size: 120%;
+    margin-bottom: 0.5rem;
+    color: var(--black);
+}
+
+.proj-box h3 {
+    font-size: 110%;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.proj-box p {
+    color: var(--gray);
+    font-size: 90%;
+    margin-top: auto;
+}
+
+.proj-box:last-child{
+    margin-bottom: 3%;
+}

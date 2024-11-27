@@ -6,11 +6,14 @@ import { RiMenu5Line } from "react-icons/ri";
 import { RxCross1 } from "react-icons/rx";
 import '../css/Header.css';
 import '../css/Global.css';
+import { useNavigate } from 'react-router-dom';
 function Header() {
     const screenWidth = window.screen.width;
     const [show, setShow] = useState(false);
     const [theme,setTheme] = useState(false);// false indicates light mode, true indicates dark mode
     const [page, setPage] = useState(null);
+    const navigate = useNavigate();
+
     function handleClick() {
         setShow(!show);
     }
@@ -45,8 +48,14 @@ function Header() {
         }
     }, [theme]);
 
-    function changePage(){
+    function changePageAbout(num){
+        navigate('/');
+        scroll.scrollTo(num);
+    }
 
+    function changePageContact(num){
+        navigate('/');
+        scroll.scrollTo(num);
     }
 
     
@@ -62,16 +71,16 @@ function Header() {
                 (show ? <><RxCross1 id='cross' onClick={handleClick} />
                     <div className='mobile-menu'>
                         <div className='box'>
-                            <h1>
+                            <h1 onClick={() => changePageAbout(0)}>
                                 About
                             </h1>
                         </div>
                         <div className='box'>
-                            <h1>
+                            <h1 onClick={() => navigate('/projects')}>
                                 Projects
                             </h1>
                         </div>
-                        <div className='box' onClick={() => scroll.scrollTo(2490)}>
+                        <div className='box' onClick={() => changePageContact(2490)}>
                             <h1>
                                 Contact
                             </h1>
@@ -80,17 +89,17 @@ function Header() {
                 :
                 <div className='text'>
                     <div className='under1'>
-                        <h1>
-                            AboutTEST
+                        <h1 onClick={() => changePageAbout(0)}>
+                            About
                         </h1>
                     </div>
                     <div className='under2'>
-                        <h1>
+                        <h1 onClick={() => navigate('/projects')}>
                             Projects
                         </h1>
                     </div>
                     <div className='under3'>
-                        <h1 onClick={() => scroll.scrollTo(3090)}>
+                        <h1 onClick={() => changePageContact(3090)}>
                             Contact
                         </h1>
                     </div>
