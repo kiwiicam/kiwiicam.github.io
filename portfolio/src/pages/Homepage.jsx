@@ -2,36 +2,72 @@ import React, { useState } from 'react'
 import Star from '../components/Star';
 import "../css/Homepage.css";
 import "../css/Global.css";
-import emailjs from '@emailjs/browser'
-
+import emailjs from '@emailjs/browser';
+import { format } from 'date-fns';
+import Cookies from 'js-cookie';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 function Homepage() {
     const [message, setMessage] = useState(null);
     const [name, setName] = useState(null);
     const [email, setEmail] = useState(null);
-
-    const numStars = 275;
-    const stars = new Array(numStars).fill(0);
+    const navigate = useNavigate();
+    // const numStars = 275;
+    // const stars = new Array(numStars).fill(0);
+    // {stars.map((_, index) => (
+    //     <Star key={index} />
+    // ))}
 
     const sendEmail = (e) => {
+        if (message === "" || name === "" || email === "" || message === null || name === null || email === null) {
+            toast.error('Please fill out all the information!', {
+                position: 'top-center', autoClose: 3000,
+            });
+            return;
+        }
+        const myCookie = Cookies.get('timer-cookie');
+        if (!myCookie) {
+            Cookies.set('timer-cookie', 'time', { expires: 10 / 1440 })
+        }
+        else {
+            toast.error('Please wait before sending another message!', {
+                position: 'top-center', autoClose: 3000,
+            });
+            return;
+        }
 
         console.log(message);
         console.log(name);
         console.log(email);
         e.preventDefault();
+        emailjs.init('BfFrj7ZyJlAhu0UDd');
         try {
-            //emailjs.sendForm();
+            emailjs.send("service_s11yy9q", "template_7j8qix6", {
+                message: message,
+                name: name,
+                email: email,
+            });
+
+            toast.success("Message has been sent!", {
+                position: 'top-center', autoClose: 3000,
+            });
+            setEmail("");
+            setMessage("");
+            setName("");
+            return;
         }
         catch (e) {
-
+            toast.error('Error sending message!', {
+                position: 'top-center', autoClose: 3000,
+            });
+            return;
         }
-
     }
 
     return (
         <div className='bg'>
-            {stars.map((_, index) => (
-                <Star key={index} />
-            ))}
+            <ToastContainer />
             <div className='about'>
                 <div className='about-text'>
                     <div className='text-container'>
@@ -54,20 +90,20 @@ function Homepage() {
                     <div></div>
                 </div>
                 <div className='project-container'>
-                    <div className='proj-box'>
+                    <div className='proj-box' onClick={() => {navigate('/projects/pricehound')}}>
                         <h2>Pricehound &gt;</h2>
                         <h3>Pricehound was a group project for one of my university classes, this project involved web scraping and comparing prices from various sources. The technologies used include React, Node.js/Express.js, Puppeteer and Firebase</h3>
 
                         <p>July-October 2024</p>
 
                     </div>
-                    <div className='proj-box'>
+                    <div className='proj-box' onClick={() => {navigate('/projects/blackjack')}}>
                         <h2>Blackjack GUI &gt;</h2>
                         <h3>This project involved creating a blackjack game entirely written in Java, and using libraries such as swing and awt to create a graphical user interface and also includes an Apache Derby embedded database.</h3>
 
                         <p>April-June 2024</p>
                     </div>
-                    <button className='button-proj'>View all &gt;</button>
+                    <button className='button-proj' onClick={() => {navigate('/projects')}}>View all &gt;</button>
 
                 </div>
             </div>
@@ -216,13 +252,13 @@ function Homepage() {
                         Through my contact form
                     </h3>
 
-                    <input onChange={(e) => setEmail(e.target.value)} id='email' className='contact-form' placeholder='Email' type='email'>
+                    <input value={email} onChange={(e) => setEmail(e.target.value)} id='email' className='contact-form' placeholder='Email' type='email'>
                     </input>
 
-                    <input onChange={(e) => setName(e.target.value)} id='name' className='contact-form' placeholder='Name' >
+                    <input value={name} onChange={(e) => setName(e.target.value)} id='name' className='contact-form' placeholder='Name' >
                     </input>
 
-                    <textarea onChange={(e) => setMessage(e.target.value)} id="message" class="contact-form" placeholder="Your message here..."></textarea>
+                    <textarea value={message} onChange={(e) => setMessage(e.target.value)} id="message" class="contact-form" placeholder="Your message here..."></textarea>
 
                     <button onClick={sendEmail} className='contact-button'> Send message &gt;</button>
                     <h3 className='email-link'>Or through my <a href='mailto:mastercamnz@gmail.com'>email address</a></h3>

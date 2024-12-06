@@ -49,3 +49,22 @@
 .proj-box:last-child{
     margin-bottom: 3%;
 }
+@media (max-width: 1000px) {
+    .center-txt{
+        margin-top: 15%;
+        width: 70%;
+    }
+    .proj-text {
+        width: 80%;
+    }
+
+    .proj-box {
+        padding: 2%;
+        font-size: 0.9rem;
+        width: 70%;
+        margin-bottom: 3%;
+    }
+
+
+
+}

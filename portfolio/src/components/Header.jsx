@@ -69,7 +69,7 @@ function Header() {
             </div>
             {screenWidth < 800 ?
                 (show ? <><RxCross1 id='cross' onClick={handleClick} />
-                    <div className='mobile-menu'>
+                    <div className='mobile-look'>
                         <div className='box'>
                             <h1 onClick={() => changePageAbout(0)}>
                                 About
