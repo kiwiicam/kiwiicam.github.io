@@ -22,7 +22,7 @@ function Footer({ BackToTop }) {
         </div>
       </div>
       <div className='text'>
-        <h3>2024 © Campbell Boulton</h3>
+        <h3>2025 © Campbell Boulton</h3>
       </div>
     </div>
   )

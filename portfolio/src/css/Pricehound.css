@@ -1,5 +1,5 @@
 .ph-main {
-    height: 140vh;
+    height: 130vh;
     width: 100%;
     background-color: var(--white);
     display: flex;
@@ -29,11 +29,28 @@
 }
 
 .even-space-ph{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-top: 8%;
-    width: 100%;
-    height: 75%;
+    margin-top: 10%;
+}
+
+
+@media (max-width: 768px) {
+    .ph-main{
+        height: 140vh;
+    }
+    .ph-text-center {
+        margin-top: 10%;
+    }
+
+    .ph-main-text {
+        width: 90%;
+        word-spacing: 2px;
+        line-height: 20px;
+        height: 10%;
+    }
+    .ph-text-center {
+        width: 90%;
+    }
+    .even-space-ph{
+        margin-top: 100%;
+    }
 }
