@@ -14,7 +14,7 @@ function PriceHound() {
       <div className='even-space-ph'>
         <div className='bj-img-text'>
           <div className='bj-left'>
-            <img src='https://kiwiicam.github.io/bj-img1.jpg'></img>
+            <img src='https://kiwiicam.github.io/ph-img1.jpg'></img>
           </div>
           <div className='bj-right'>
             <p>
@@ -29,7 +29,7 @@ function PriceHound() {
             </p>
           </div>
           <div className='bj-right2'>
-            <img src='https://kiwiicam.github.io/bj-img2.jpg'></img>
+            <img src='https://kiwiicam.github.io/ph-img2.jpg'></img>
 
           </div>
         </div>
