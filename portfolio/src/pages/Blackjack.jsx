@@ -16,7 +16,7 @@ function Blackjack() {
       <div className="even-space-bj">
         <ProjectCard
           imageURL="https://kiwiicam.github.io/bj-img1.jpg"
-          text="Blackjack game with the statistic on the left side of the screen, your cards on the bottom with buttons to make moves with the dealers cards up the top."
+          text="Blackjack game with the players statistics on the left side of the screen, your cards on the bottom with buttons to make moves with the dealers cards up the top."
           left={true}
         />
         <ProjectCard

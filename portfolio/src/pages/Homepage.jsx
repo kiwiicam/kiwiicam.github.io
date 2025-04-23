@@ -77,7 +77,7 @@ function Homepage() {
                     </div>
 
                     <div className='about-image-container'>
-                        <img src='https://kiwiicam.github.io/pfp.jpg'></img>
+                        <img src='https://kiwiicam.github.io/pfp2.jpg'></img>
                     </div>
                 </div>
             </div>

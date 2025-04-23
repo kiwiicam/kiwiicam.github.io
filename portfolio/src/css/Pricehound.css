@@ -28,15 +28,16 @@
     border-bottom: 3px dotted var(--black);
 }
 
-.even-space-ph{
+.even-space-ph {
     margin-top: 10%;
 }
 
 
 @media (max-width: 768px) {
-    .ph-main{
+    .ph-main {
         height: 140vh;
     }
+
     .ph-text-center {
         margin-top: 10%;
     }
@@ -47,10 +48,21 @@
         line-height: 20px;
         height: 10%;
     }
+
     .ph-text-center {
         width: 90%;
     }
-    .even-space-ph{
+
+    .even-space-ph {
         margin-top: 100%;
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1300px) {
+    .ph-main {
+        height: 250vh;
+    }
+    .even-space-ph {
+        margin-top: 20%;
     }
 }

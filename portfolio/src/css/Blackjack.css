@@ -133,3 +133,12 @@
         margin-top: 220px;
     }
 }
+
+@media screen and (min-width: 900px) and (max-width: 1300px) {
+    .bj-main {
+        height: 210vh;
+    }
+    .even-space-bj {
+        margin-top: 10%;
+    }
+}
