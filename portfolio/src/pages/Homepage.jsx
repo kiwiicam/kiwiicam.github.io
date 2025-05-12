@@ -36,10 +36,6 @@ function Homepage() {
             });
             return;
         }
-
-        console.log(message);
-        console.log(name);
-        console.log(email);
         e.preventDefault();
         emailjs.init('BfFrj7ZyJlAhu0UDd');
         try {
@@ -77,7 +73,7 @@ function Homepage() {
                     </div>
 
                     <div className='about-image-container'>
-                        <img src='https://kiwiicam.github.io/pfp2.jpg'></img>
+                        <img src='http://kiwiicam.github.io/pfp4.jpeg'></img>
                     </div>
                 </div>
             </div>

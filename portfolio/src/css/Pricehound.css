@@ -1,5 +1,5 @@
 .ph-main {
-    height: 130vh;
+    height: 180vh;
     width: 100%;
     background-color: var(--white);
     display: flex;
@@ -58,11 +58,20 @@
     }
 }
 
-@media screen and (min-width: 900px) and (max-width: 1300px) {
+@media  (max-width:1920px){
     .ph-main {
-        height: 250vh;
+        height: 235vh;
     }
     .even-space-ph {
         margin-top: 20%;
+    }
+}
+
+@media (max-width: 1700px) {
+    .bj-main {
+        height: 200vh;
+    }
+    .even-space-bj {
+        margin-top: 15%;
     }
 }
