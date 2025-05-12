@@ -134,11 +134,20 @@
     }
 }
 
-@media screen and (min-width: 900px) and (max-width: 1300px) {
+@media (max-width: 1920px) {
     .bj-main {
-        height: 210vh;
+        height: 200vh;
     }
     .even-space-bj {
-        margin-top: 10%;
+        margin-top: 8%;
+    }
+}
+
+@media (max-width: 1700px) {
+    .bj-main {
+        height: 160vh;
+    }
+    .even-space-bj {
+        margin-top: 5%;
     }
 }

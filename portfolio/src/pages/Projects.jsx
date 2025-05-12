@@ -23,12 +23,13 @@ function Projects() {
 
         <p>April-June 2024</p>
       </div>
-      <div className='proj-box'>
-        <h2>TBD &gt;</h2>
-        <h3>TBD</h3>
+      <div className='proj-box' onClick={() => { navigate('/projects/minimax')}}>
+        <h2>Minimax Connect-4 &gt;</h2>
+        <h3>This project involved creating a minimax algorithm to find a near optimal move against an opponent in the game Connect-4.</h3>
 
-        <p>December 2024 - ???</p>
+        <p>March 2025 - April 2025</p>
       </div>
+      
     </div>
   )
 }
